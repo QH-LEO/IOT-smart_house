@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="src">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../Downloads/新建文件夹/aliyun-oss-java-sdk-master (1).zip!/aliyun-oss-java-sdk-master/src" />
+      <root url="jar://$PROJECT_DIR$/../Downloads/新建文件夹/aliyun-oss-java-sdk-master (1).zip!/aliyun-oss-java-sdk-master/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/../Downloads/新建文件夹/aliyun-oss-java-sdk-master (1).zip!/aliyun-oss-java-sdk-master/src/test/java" />
+    </SOURCES>
+  </library>
+</component>
