@@ -55,9 +55,7 @@ public class nettythread implements Runnable{
             response = new DefaultFullHttpResponse(HTTP_1_1,
                     OK, Unpooled.wrappedBuffer(res.getBytes("UTF-8")));
             response.headers().set(CONTENT_TYPE, "application/json");
-            response.headers().setInt(CONTENT_LENGTH,
-                    response.content().readableBytes());
-
+            response.headers().setInt(CONTENT_LENGTH, response.content().readableBytes());
             //kua yu 请求的URL：/PictureCheck/picturecheck
             //读取的数据 :{"userid":123456,"url":"Picture/PM56czScDh.jpg"}
             response.headers().set(ACCESS_CONTROL_ALLOW_ORIGIN,"*");

@@ -26,6 +26,7 @@ public class Judge_Login {
             jedis.del(u.getpho());
             login a=new login();
             a.Login(u);
+            //xxx
         }
     }
 }
