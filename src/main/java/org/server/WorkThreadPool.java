@@ -8,7 +8,7 @@ import java.util.concurrent.Executors;
  * @Date: 19-7-26  上午1:23
  * @Version 1.0
  */
-public class netpool {
+public class WorkThreadPool {
 
 //newcachedpool 按需生成线程归还重用
 //jdk原文描述，学好英语 ！

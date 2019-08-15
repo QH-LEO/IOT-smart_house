@@ -1,4 +1,4 @@
-package org.test;
+package org.tarsh;
 
 import com.sun.istack.internal.logging.Logger;
 import redis.clients.jedis.Jedis;
@@ -12,13 +12,11 @@ import java.util.concurrent.LinkedBlockingQueue;
  * @Date: 19-8-13  下午5:25
  * @Version 1.0
  */
-public class xxx {
+public class redis_pipeline {
 
     public static void main(String[] args) throws InterruptedException {
-
-
         Jedis jedis = new Jedis("127.0.0.1", 6379);
-        Logger logger = Logger.getLogger(xxx.class);
+        Logger logger = Logger.getLogger(redis_pipeline.class);
             long start = System.currentTimeMillis();
             for (int i = 0; i < 10000; i++) {
                 jedis.set(String.valueOf(i), String.valueOf(i));
@@ -31,7 +29,6 @@ public class xxx {
         for (int i = 0; i < 10000; i++) {
             pipe.set(String.valueOf(i), String.valueOf(++i));
            // pipe.get(String.valueOf(i)).get();
-
         }
         pipe.sync(); // 获取所有的response
         long end_pipe = System.currentTimeMillis();
@@ -49,3 +46,4 @@ public class xxx {
 
     }}
 
+///home/qhwd/.m2/repository/net/sf/json-lib/json-lib/2.4/json-lib-2.4-jdk15.jar

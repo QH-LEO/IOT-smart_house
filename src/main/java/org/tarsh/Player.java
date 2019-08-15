@@ -1,4 +1,4 @@
-package org.test;
+package org.tarsh;
 
 import org.bytedeco.ffmpeg.global.avcodec;
 import org.bytedeco.javacv.FFmpegFrameGrabber;

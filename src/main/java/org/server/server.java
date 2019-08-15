@@ -2,10 +2,7 @@ package org.server;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.PooledByteBufAllocator;
-import io.netty.channel.ChannelFuture;
-import io.netty.channel.ChannelInitializer;
-import io.netty.channel.ChannelOption;
-import io.netty.channel.EventLoopGroup;
+import io.netty.channel.*;
 import io.netty.channel.epoll.EpollEventLoopGroup;
 import io.netty.channel.epoll.EpollServerSocketChannel;
 import io.netty.channel.socket.SocketChannel;
@@ -47,8 +44,8 @@ public class server {
                             ch.pipeline().addLast(new ChunkedWriteHandler());//Chunked是一种报文，处理后返回去，报文回去查一下
                             //  ch.pipeline().addLast(new Handle1());
                             // ch.pipeline().addLast(new CheckHandler());
-                           // ch.pipeline().addLast(new OutHandler());
-                           // ch.pipeline().addLast(new InHandler());//如果上两句不写
+                            ch.pipeline().addLast( new OutHandler());
+                            ch.pipeline().addLast( new InHandler());
                             // 就会有两次File处理（一次头处理，一次体处理）
                         }
 

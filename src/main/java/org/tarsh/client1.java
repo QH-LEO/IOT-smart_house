@@ -1,4 +1,4 @@
-package org.test;
+package org.tarsh;
 
 import org.bytedeco.javacv.OpenCVFrameGrabber;
 

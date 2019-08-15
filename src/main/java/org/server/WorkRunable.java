@@ -12,13 +12,12 @@ import java.io.UnsupportedEncodingException;
 import static io.netty.handler.codec.http.HttpHeaderNames.*;
 import static io.netty.handler.codec.http.HttpResponseStatus.OK;
 import static io.netty.handler.codec.http.HttpVersion.HTTP_1_1;
-
 /**
  * @Author: Hao Qin
  * @Date: 19-7-26  上午1:44
  * @Version 1.0
  */
-public class nettythread implements Runnable{
+public class WorkRunable implements Runnable{
     private String result="";
     private org.utils.message message=null;
     private ChannelHandlerContext ctx=null;
@@ -40,17 +39,12 @@ public class nettythread implements Runnable{
     public void setMessage(org.utils.message message) {
         this.message = message;
     }
-
     @Override
     public void run() {
         try {
-           // State state= ServletTest.doServlet(this.message);
-
-            userinfo user=null;
-            String res=new Gson().toJson(user);
+           userinfo u= transaction.doServlet(this.message);
+            String res=new Gson().toJson(u);
             System.out.println("res-----------"+res);
-
-
             FullHttpResponse response = null;
             response = new DefaultFullHttpResponse(HTTP_1_1,
                     OK, Unpooled.wrappedBuffer(res.getBytes("UTF-8")));
@@ -59,8 +53,6 @@ public class nettythread implements Runnable{
             //kua yu 请求的URL：/PictureCheck/picturecheck
             //读取的数据 :{"userid":123456,"url":"Picture/PM56czScDh.jpg"}
             response.headers().set(ACCESS_CONTROL_ALLOW_ORIGIN,"*");
-
-
           //  if (HttpHeaderUtil.isKeepAlive(this.message.getFhr())) {
                 response.headers().set(CONNECTION, KEEP_ALIVE);
            // }
@@ -69,8 +61,6 @@ public class nettythread implements Runnable{
 //            }
             this.ctx.write(response);
             this.ctx.flush();
-
-
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
