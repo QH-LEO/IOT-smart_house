@@ -12,8 +12,8 @@ import java.util.Date;
 public class uploadobject {
 
     private static String endpoint = "http://oss-cn-beijing.aliyuncs.com";
-    private static String accessKeyId = "LTAIPTVKDnbteHJn";
-    private static String accessKeySecret = "Hm5O1SSCPlcD73lo4KaedM6tLt1Nk5";
+    private static String accessKeyId = "";
+    private static String accessKeySecret = "";
 
     private static String bucketName = "ailife";
   //  private static String key = "/home/qhwd/smartlife/01.jpg";
