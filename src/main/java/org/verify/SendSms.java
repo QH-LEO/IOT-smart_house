@@ -26,7 +26,7 @@ public class SendSms {
         //String code =
 //        u.setpho("15525835777");
         String p=u.getpho();
-        DefaultProfile profile = DefaultProfile.getProfile("cn-hangzhou", "LTAIPTVKDnbteHJn", "Hm5O1SSCPlcD73lo4KaedM6tLt1Nk5");
+        DefaultProfile profile = DefaultProfile.getProfile("cn-hangzhou", "", "");
         IAcsClient client = new DefaultAcsClient(profile);
         CommonRequest request = new CommonRequest();
         request.setMethod(MethodType.POST);
