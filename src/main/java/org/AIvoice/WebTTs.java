@@ -18,7 +18,7 @@ import java.util.Map;
 public class WebTTs {
     private static final String WEBTTS_URL = "http://api.xfyun.cn/v1/service/v1/tts";
     private static final String APPID = "5b67c3b7";
-    private static final String API_KEY = "7537552fcb290713f1c2f20c008220d1";
+    private static final String API_KEY = "这能告诉你？";
   //  private static final String TEXT = "提醒 "+s+"号"+s1+"层"+s2+"户，发生漏水，请及时维修 提醒 "+s+"号"+s1+"层"+s2+"户，发生漏水，请及时维修";
     private static final String AUE = "raw";
     private static final String AUF = "audio/L16;rate=8000";
