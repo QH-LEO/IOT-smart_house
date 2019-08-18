@@ -40,7 +40,7 @@ public class transaction {
 
             //1登陆=========================================================================================================
             switch (result[1]) {
-                case "login1":
+                case "login":
                     cls=Class.forName("org.function."+result[1]);
                     con=cls.getConstructor();
                     login login1= (login)con.newInstance();
