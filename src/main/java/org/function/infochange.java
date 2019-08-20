@@ -15,7 +15,7 @@ import java.sql.Statement;
  * @Version 1.0
  */
 public class infochange {
-    public void insert(userinfo u) throws SQLException, UnsupportedEncodingException {
+    public userinfo insert(userinfo u) throws SQLException, UnsupportedEncodingException {
         Connection conn= (Connection) pool.get();
         WebTTs w=new WebTTs(u);
         String S =w.getvoice();
@@ -25,6 +25,8 @@ public class infochange {
         statement.execute(sql);
         conn.setAutoCommit(false);
         conn.commit();
+        u.setstate(1);
+        return u;
 
     }
 

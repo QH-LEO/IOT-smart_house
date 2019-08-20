@@ -38,7 +38,7 @@ public class Judge_Action {
 
 
         if (s.caculate() <0.75) {
-            u.setstate('f');
+            u.setstate(1);
             // u.setpho("");//前端传入的手机号
             u.settime(u.gettime());
             int a=0;
@@ -55,7 +55,7 @@ public class Judge_Action {
         }
         else if(s.caculate()>=0.75&&s.caculate()<0.9){
             if (s.caculate()==0.75) {
-                u.setstate('f');
+                u.setstate(1);
                 //  u.setpho("");//前端传入的手机号
                 u.settime(u.gettime());
                // u.setimage(s.image1);
@@ -65,7 +65,7 @@ public class Judge_Action {
             }
 
         else if(s.caculate()>=0.9){
-            u.setstate('t');
+            u.setstate(0);
             //  u.setpho("");//前端传入的手机号
             u.settime(u.gettime());
            // u.setimage(s.image1);

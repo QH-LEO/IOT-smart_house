@@ -14,7 +14,7 @@ import java.sql.SQLException;
  */
 public class Judge_Login {
     static Logger LOGGER=Logger.getLogger(Judge_Login.class);
-    public void judgelogin(userinfo u)throws SQLException {
+    public userinfo judgelogin(userinfo u)throws SQLException {
 //        CountDownLatch begin = new CountDownLatch(2);
 //        SendSms s=new SendSms();
 //        int i=s.send(u);
@@ -26,7 +26,10 @@ public class Judge_Login {
             jedis.del(u.getpho());
             login a=new login();
             a.Login(u);
+            u.setstate(1);
+
 
         }
+        return u;
     }
 }

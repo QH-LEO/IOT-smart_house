@@ -15,7 +15,7 @@ public class userinfo {
     private String pho;
     private String p;
     private String time;
-    private char   state;
+    private int  state;
     private int  dnum;
     private String voicename;
    // public  BufferedImage image;
@@ -49,7 +49,7 @@ public class userinfo {
         this.dnum = dnum;
     }
 
-    public void setstate(char state) {
+    public void setstate(int state) {
         this.state = state;
     }
 
@@ -74,7 +74,7 @@ public class userinfo {
         return pho;
     }
 
-    public char getstate() {
+    public int getstate() {
         return state;
     }
 
